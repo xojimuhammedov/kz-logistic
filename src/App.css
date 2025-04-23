@@ -1,0 +1,51 @@
+.form-input {
+    padding: 12px 8px;
+    border: none;
+    border-bottom: 1.5px solid rgba(142, 142, 142, 1);
+    outline: none;
+    width: 100%;
+    font-family: "Manrope", sans-serif !important;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 0.5px;
+    background-color: transparent;
+    margin: 8px 0;
+}
+
+.form-input::placeholder {
+    color: var(--Input-text, #8e8e8e);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 0.5px;
+    font-family: "Manrope", sans-serif !important;
+}
+
+.form-text {
+    padding: 12px 8px;
+    border: none;
+    border-bottom: 1.5px solid rgba(142, 142, 142, 1);
+    outline: none;
+    width: 100%;
+    font-family: "Manrope", sans-serif !important;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 0.5px;
+    background-color: transparent;
+    height: 120px;
+    resize: none;
+}
+
+.form-map {
+    width: 100%;
+    border-radius: 10px;
+}
+
+a:hover{
+    text-decoration: none !important;
+}
