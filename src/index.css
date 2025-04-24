@@ -19,6 +19,7 @@ h5,
 h6,
 a,
 p,
-button {
+button,
+span {
     font-family: "Manrope", sans-serif !important;
 }

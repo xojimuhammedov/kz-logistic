@@ -8,11 +8,13 @@ import ServicesGrid from './components/Services'
 import LogisticsStatistics from './components/Statistic'
 import ContactPage from './pages/ContactPage'
 import Navbar from './components/Navbar'
+import Nav from './components/Nav'
 
 function App() {
 
   return (
     <>
+      <Nav />
       <Navbar />
       <Routes>
         <Route path='/' element={<>

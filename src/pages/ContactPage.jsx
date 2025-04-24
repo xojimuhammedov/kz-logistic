@@ -1,6 +1,6 @@
 import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
-// import ContactBanner from "../assets/contact-banner.jpg";
+import ContactBanner from "../assets/contact-banner.jpg";
 import { useTranslation } from "react-i18next";
 import Form from "./Form";
 
@@ -14,7 +14,7 @@ function ContactPage() {
                     lg: "30px 0",
                 }}>
                 <Box className="container">
-                    {/* <Image {...css.banner} src={ContactBanner} /> */}
+                    <Image {...css.banner} src={ContactBanner} />
                     <Heading {...css.subname}>{t("Contact")}</Heading>
                     <Flex
                         flexDirection={{ base: "column", md: "row" }}
@@ -73,8 +73,7 @@ const css = {
     },
     banner: {
         height: {
-            base: "450px",
-            lg: "650px",
+            base: "550px",
         },
         width: "100%",
         borderRadius: "12px",

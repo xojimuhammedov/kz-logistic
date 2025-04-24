@@ -1,32 +1,34 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import UzbekImage from "../assets/kz.png";
-import RussianImage from "../assets/russian.png";
-import EnglishImage from "../assets/english.png";
+// import UzbekImage from "../assets/kz.png";
+// import RussianImage from "../assets/russian.png";
+// import EnglishImage from "../assets/english.png";
 // import ChinaImage from "../assets/china.png";
 import {
     Box,
+    Flex,
     Image,
     Menu,
     MenuButton,
     MenuItem,
     MenuList,
 } from "@chakra-ui/react";
+import Globe from "../assets/Globe";
 
 const languageData = [
     {
         id: 1,
-        image: UzbekImage,
+        title: 'KZ - Kazakhistan',
         value: "kz",
     },
     {
         id: 2,
-        image: RussianImage,
+        title: "RU - Russian",
         value: "ru",
     },
     {
         id: 3,
-        image: EnglishImage,
+        title: "EN - England",
         value: "en",
     },
     // {
@@ -43,36 +45,29 @@ function Language() {
         i18n.changeLanguage(value);
     };
 
-    const languageImage =
+    const languageValue =
         i18n?.language === "kz"
-            ? UzbekImage
+            ? 'KZ - Kazakhistan'
             : i18n?.language === "ru"
-                ? RussianImage
-                : EnglishImage
+                ? "RU - Russian"
+                : "EN - England"
 
     const data = languageData?.filter((item) => item?.value != i18n.language);
 
     return (
         <>
             <Menu isLazy>
-                <MenuButton minW={'15px'}>
-                    <Image
-                        className={"language-image"}
-                        src={languageImage}
-                        alt="Language"
-                        {...css.image}
-                    />
-                </MenuButton>
+                <Flex gap={'8px'} align={'center'}>
+                    <Globe />
+                    <MenuButton fontWeight={'600'} fontFamily={'"Manrope"'} minW={'100px'}>
+                        {languageValue}
+                    </MenuButton>
+                </Flex>
                 <MenuList ml={"-12px"} zIndex="999" {...css.menuItem}>
                     {data?.map((item, index) => (
                         <MenuItem key={index}>
-                            <Box onClick={() => onChangeLanguage(item.value)}>
-                                <Image
-                                    className={"language-image"}
-                                    src={item.image}
-                                    {...css.images}
-                                    alt="English"
-                                />
+                            <Box fontWeight={'600'} onClick={() => onChangeLanguage(item.value)}>
+                                {item?.title}
                             </Box>
                         </MenuItem>
                     ))}
@@ -86,7 +81,7 @@ export default Language;
 
 const css = {
     menuItem: {
-        minWidth: "35px",
+        minWidth: "130px",
     },
     image: {
         width: {
