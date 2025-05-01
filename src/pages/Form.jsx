@@ -134,8 +134,7 @@ function Form() {
                         </Button>
                     </Box>
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2761.6019897284!2d76.94493577598072!3d43.264902471123165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836e9be6e57019%3A0x108e2a6fe0c45cff!2sZhetysu!5e1!3m2!1sen!2s!4v1737521055654!5m2!1sen!2s"
-                        className="form-map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2715.3103515694324!2d51.89098498774162!3d47.11258899675808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41a3e9904dcef067%3A0x4f5e9ce1ca3f296c!2sGagarin%20St%2065%2C%20Atyrau%2C%20Kazakhstan!5e0!3m2!1sen!2s!4v1745735616688!5m2!1sen!2s" className="form-map"
                         style={{ border: "0" }}
                         allowFullScreen=""
                         loading="lazy"

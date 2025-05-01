@@ -1,38 +1,26 @@
 import { Box, Grid, Heading, Text, VStack, Icon, useBreakpointValue, Flex } from "@chakra-ui/react";
 import ServiceIcon from "../assets/ServiceIcon";
-
-const services = [
-    {
-        title: "МОРСКИЕ ПЕРЕВОЗКИ",
-        description:
-            "В FastGo мы стремимся предоставлять нашим клиентам персонализированные и эффективные логистические....",
-        highlight: true,
-    },
-    ...Array(5).fill({
-        title: "ВОЗДУШНЫЕ ПЕРЕВОЗКИ",
-        description:
-            "В FastGo мы стремимся предоставлять нашим клиентам персонализированные и эффективные логистические....",
-        highlight: false,
-    }),
-];
+import { servicesData } from "../data";
+import { useTranslation } from "react-i18next";
 
 export default function ServicesGrid() {
     const columns = useBreakpointValue({ base: 1, md: 2, lg: 3 });
+    const { t, i18n } = useTranslation()
 
     return (
         <Box {...css.service}>
             <Box className="container">
                 <VStack spacing={3} textAlign="center" mb={10}>
                     <Text color="#F70" fontWeight="bold" textTransform="uppercase">
-                        НАШИ УСЛУГИ
+                        {t("Our Services")}
                     </Text>
-                    <Heading color={'#121D50'} fontSize={{ base: "2xl", md: "48px" }}>
-                        ЭФФЕКТИВНАЯ И НАДЕЖНАЯ <br /> ДОСТАВКА С FASTGO
+                    <Heading color={'#121D50'} maxW={'700px'} fontSize={{ base: "2xl", md: "48px" }}>
+                        {t("ЭФФЕКТИВНАЯ И НАДЕЖНАЯ ДОСТАВКА С FASTGO")}
                     </Heading>
                 </VStack>
 
                 <Grid templateColumns={`repeat(${columns}, 1fr)`} gap={6}>
-                    {services.map((service, index) => (
+                    {servicesData?.map((service, index) => (
                         <Box
                             key={index}
                             bg="white"
@@ -58,10 +46,29 @@ export default function ServicesGrid() {
                                     as={ServiceIcon}
                                 />
                             </Flex>
-                            <Heading fontSize="xl" m={'16px 0'} >
-                                {service.title}
+                            <Heading
+                                overflow="hidden"
+                                textOverflow="ellipsis"
+                                sx={{
+                                    WebkitLineClamp: 2,
+                                    WebkitBoxOrient: "vertical",
+                                }}
+                                fontSize="xl" m={'16px 0'}>
+                                {service[`title_${i18n?.language}`]}
                             </Heading>
-                            <Text fontSize="sm">{service.description}</Text>
+                            <Text
+                                display="-webkit-box"
+                                overflow="hidden"
+                                textOverflow="ellipsis"
+                                sx={{
+                                    WebkitLineClamp: 3,
+                                    WebkitBoxOrient: "vertical",
+                                }}
+                                fontSize="sm"
+                                dangerouslySetInnerHTML={{
+                                    __html: service[`description_${i18n?.language}`]
+                                }}
+                            />
                         </Box>
                     ))}
                 </Grid>

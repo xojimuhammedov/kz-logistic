@@ -60,9 +60,13 @@ function Footer() {
                     </Flex>
                     <Flex flexDirection={"column"}>
                         <Heading {...css.title}>{t("Contact")}</Heading>
-                        <Link {...css.link} target="_blank" href={"tel:+77753378595"}>
-                            +7 775 337 85 95
+                        <Link {...css.link} target="_blank" href={"tel:+77710540606"}>
+                            +7 771 054 06 06
                         </Link>
+                        <Link {...css.link} target="_blank" href={"tel:+77710540606"}>
+                            +7 771 014 05 05
+                        </Link>
+                        
                         <Link
                             {...css.link}
                             target="_blank"
@@ -74,7 +78,7 @@ function Footer() {
                             {...css.link}
                             href={"https://maps.app.goo.gl/TArvqgcs41X2c1zQ8"}>
                             {t(
-                                "Республика Казахстан, г.Алматы, Тулебаева 38, Бизнес центр Жетысу, офис 512"
+                                "Pеспублика Казахстан Город Атырау Гагарина 65"
                             )}
                         </Link>
                     </Flex>

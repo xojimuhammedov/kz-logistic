@@ -1,12 +1,14 @@
-import { Box, Flex, Heading, Image, Text, Link } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Text, Link, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 
 // import LogoIcon from "../assets/navbar-logo.png";
 // import NavbarMenu from "./NavbarMenu";
-import { Link as Alink } from "react-router-dom";
+import { Link as Alink, useNavigate } from "react-router-dom";
+import { servicesData } from "../data";
 
 function Navbar() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const navigate = useNavigate()
     return (
         <Box>
             <Box pb={'24px'} borderBottom={'1px solid rgba(51, 51, 51, 0.20)'} className="container">
@@ -21,9 +23,19 @@ function Navbar() {
                         <Alink to={"/company"}>
                             <Text {...css.link}>{t("About")}</Text>
                         </Alink>
-                        <Link href={"#service"}>
+                        <Menu isLazy>
+                            <MenuButton {...css.link}>{t("Services")}</MenuButton>
+                            <MenuList>
+                                {
+                                    servicesData?.map((item) => (
+                                        <MenuItem onClick={() => navigate(`/service/${item?.id}`)} fontSize={'14px'} color={'rgba(0, 0, 0, 1)'} fontWeight={'600'}>{item[`title_${i18n?.language}`]}</MenuItem>
+                                    ))
+                                }
+                            </MenuList>
+                        </Menu>
+                        {/* <Link href={"#service"}>
                             <Text {...css.link}>{t("Services")}</Text>
-                        </Link>
+                        </Link> */}
                         <Link href={"#partner"}>
                             <Text {...css.link}>{t("Partners")}</Text>
                         </Link>

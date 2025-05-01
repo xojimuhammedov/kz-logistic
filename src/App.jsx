@@ -9,6 +9,7 @@ import LogisticsStatistics from './components/Statistic'
 import ContactPage from './pages/ContactPage'
 import Navbar from './components/Navbar'
 import Nav from './components/Nav'
+import ServicesAbout from './pages/ServicesAbout'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
           <Question />
         </>} />
         <Route path='/contact' element={<ContactPage />} />
+        <Route path='/service/:id' element={<ServicesAbout />} />
       </Routes>
       <Footer />
     </>
