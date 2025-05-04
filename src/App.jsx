@@ -10,6 +10,7 @@ import ContactPage from './pages/ContactPage'
 import Navbar from './components/Navbar'
 import Nav from './components/Nav'
 import ServicesAbout from './pages/ServicesAbout'
+import VehicleShowcase from './components/AutoParc'
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         </>} />
         <Route path='/contact' element={<ContactPage />} />
         <Route path='/service/:id' element={<ServicesAbout />} />
+        <Route path='/autoparc' element={<VehicleShowcase />} />
       </Routes>
       <Footer />
     </>
