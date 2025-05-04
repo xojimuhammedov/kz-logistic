@@ -14,7 +14,7 @@ const vehicles = [
         title: "Грузовой транспорт с гидролопатой",
         payload: "Грузоподъёмность: 10 т",
         volume: "Объем кузова: 40 м³",
-        size: "Д/Ш/В: 2,6 × ...", // Adjust with actual value
+        size: "8 х 2,4 х 2,6", // Adjust with actual value
         image: "https://mkgloballogistics.kz/wp-content/uploads/2025/01/1678688258_hdpic-club-p-mashina-dlya-perevozki-3-tonn-30-1.jpg",
         scheme: "https://mkgloballogistics.kz/wp-content/uploads/2025/01/group-564.png"
     },

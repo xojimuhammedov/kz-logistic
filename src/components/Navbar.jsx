@@ -20,9 +20,16 @@ function Navbar() {
                         <Alink to={"/"}>
                             <Text {...css.link}>{t("Home")}</Text>
                         </Alink>
-                        <Alink to={"/company"}>
+                        <Menu isLazy>
+                            <MenuButton {...css.link}>{t("About")}</MenuButton>
+                            <MenuList>
+                                <MenuItem onClick={() => navigate('/company')} fontSize={'14px'} color={'rgba(0, 0, 0, 1)'} fontWeight={'600'}>{t("About")}</MenuItem>
+                                <MenuItem onClick={() => navigate('/autoparc')} fontSize={'14px'} color={'rgba(0, 0, 0, 1)'} fontWeight={'600'}>{t("Автопарк")}</MenuItem>
+                            </MenuList>
+                        </Menu>
+                        {/* <Alink to={"/company"}>
                             <Text {...css.link}>{t("About")}</Text>
-                        </Alink>
+                        </Alink> */}
                         <Menu isLazy>
                             <MenuButton {...css.link}>{t("Services")}</MenuButton>
                             <MenuList>
