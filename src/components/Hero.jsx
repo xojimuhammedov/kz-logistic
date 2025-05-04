@@ -75,7 +75,7 @@ const Hero = ({ data }) => {
                                 {...css.button}
                                 px={6}
                             >
-                                ЗАПРОСИТЬ СЕЙЧАС
+                                {t("ЗАПРОСИТЬ СЕЙЧАС")}
                             </Button>
                         </Box>
                     </Stack>

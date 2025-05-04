@@ -2,23 +2,32 @@ import { Box, Button, Flex, Grid, Heading, Image, Text } from '@chakra-ui/react'
 import React from 'react';
 
 import TruckImage from '../assets/truck.png'
+import { useTranslation } from 'react-i18next';
 
 const features = [
     {
         number: "01",
-        title: "ЭКСПЕРТИЗА И ОПЫТ",
+        title_ru: "ЭКСПЕРТИЗА И ОПЫТ",
+        title_kz: "САРАПТАМА ЖӘНЕ ТӘЖІРИБЕ",
+        title_en: "EXPERTISE AND EXPERIENCE"
     },
     {
         number: "02",
-        title: "ПРИВЕРЖЕННОСТЬ КАЧЕСТВУ",
+        title_ru: "ПРИВЕРЖЕННОСТЬ КАЧЕСТВУ",
+        title_kz: "САПАҒА АДАЛДЫҚ",
+        title_en: "COMMITMENT TO QUALITY"
     },
     {
         number: "03",
-        title: "КОМПЛЕКСНЫЕ УСЛУГИ",
-    },
+        title_ru: "КОМПЛЕКСНЫЕ УСЛУГИ",
+        title_kz: "КЕШЕНДІ ҚЫЗМЕТТЕР",
+        title_en: "COMPREHENSIVE SERVICES"
+    }
 ];
 
+
 const About = () => {
+    const { t, i18n } = useTranslation()
     return (
         <Box p={'84px 0'}>
             <Box className='container'>
@@ -31,16 +40,16 @@ const About = () => {
                 >
                     <Box maxW={{ base: "full", md: "50%" }}>
                         <Text color="#F70" fontWeight="bold" textTransform="uppercase" mb={2}>
-                            О КОМПАНИИ
+                            {t("About")}
                         </Text>
                         <Heading color={'#121D50'} fontSize={{ base: "2xl", md: "45px" }} mb={4}>
-                            ЛОГИСТИЧЕСКИЕ РЕШЕНИЯ ДЛЯ ВАШЕГО УСПЕХА
+                            {t("ЛОГИСТИЧЕСКИЕ РЕШЕНИЯ ДЛЯ ВАШЕГО УСПЕХА")}
                         </Heading>
                         <Text fontSize="md" color="gray.600" mb={6}>
-                            В FastGo мы верим в предоставление нашим клиентам персонализированных и эффективных логистических решений, которые отвечают их уникальным потребностям. Благодаря многолетнему опыту и команде экспертов мы стремимся ...
+                            {t("В FastGo мы верим в предоставление нашим клиентам персонализированных и эффективных логистических решений, которые отвечают их уникальным потребностям. Благодаря многолетнему опыту и команде экспертов мы стремимся ...")}
                         </Text>
                         <Button w={'180px'} h={'54px'} bg="#F70" color="white" borderRadius={'12px'} _hover={{ bg: "orange.600" }}>
-                            ПОДРОБНЕЕ
+                            {t("ПОДРОБНЕЕ")}
                         </Button>
                     </Box>
                     <Box>
@@ -69,7 +78,7 @@ const About = () => {
                                 {feature.number}
                             </Text>
                             <Text fontSize="lg" fontWeight="700">
-                                {feature.title}
+                                {feature[`title_${i18n?.language}`]}
                             </Text>
                         </Box>
                     ))}

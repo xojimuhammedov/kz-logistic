@@ -9,13 +9,16 @@ import {
     Stack,
     Icon,
     Image,
+    Link,
 } from '@chakra-ui/react';
 // import { ArrowForwardIcon } from '@chakra-ui/icons';
 
 import TruckImage from '../assets/truck2.png'
 import MapImage from '../assets/map.png'
+import { useTranslation } from 'react-i18next';
 
 export default function TransportHero() {
+    const { t } = useTranslation()
     return (
         <Box
             w="100%"
@@ -65,21 +68,22 @@ export default function TransportHero() {
                             lineHeight="1.2"
                             color="#2F2F2F"
                         >
-                            Транспорт и <br />логистика
+                            {t("Транспорт и логистика")}
                         </Heading>
 
                         <Text fontSize={{ base: "md", md: "lg" }} color="#333">
-                            Лидеры в сфере транспорта и логистики переосмысливают принципы перемещения товаров в мире, где каждая миля имеет значение.
+                            {t("Лидеры в сфере транспорта и логистики переосмысливают принципы перемещения товаров в мире, где каждая миля имеет значение.")}
                         </Text>
 
                         <Box>
-                            <Button
-                                size="lg"
+                            <Link
+                                href='tel:+77710140505'
+                                // size="lg"
                                 {...css.button}
                                 px={6}
                             >
-                                ЗАПРОСИТЬ СЕЙЧАС
-                            </Button>
+                                {t("ЗАПРОСИТЬ СЕЙЧАС")}
+                            </Link>
                         </Box>
                     </Stack>
 
@@ -128,6 +132,11 @@ const css = {
         color: "#fff",
         fontSize: "14px",
         transition: "0.3s easy",
+        height: "45px",
+        display: "flex",
+        alignItems: "center",
+        width: "200px",
+        justifyContent: "center",
 
         _hover: {
             background: "#F70",

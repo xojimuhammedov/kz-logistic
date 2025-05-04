@@ -67,12 +67,12 @@ function Footer() {
                             +7 771 014 05 05
                         </Link>
                         
-                        <Link
+                        {/* <Link
                             {...css.link}
                             target="_blank"
                             href={"mailto:sultanbek.asilbek@gmail.com"}>
                             sultanbek.asilbek@gmail.com
-                        </Link>
+                        </Link> */}
                         <Link
                             target="_blank"
                             {...css.link}

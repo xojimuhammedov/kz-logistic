@@ -6,6 +6,7 @@ import IconTwo from '../assets/icon2.svg'
 import IconThree from '../assets/icon3.svg'
 import IconFive from '../assets/icon4.svg'
 import IconFour from '../assets/icon5.svg'
+import { useTranslation } from 'react-i18next';
 
 const data = [
     {
@@ -47,6 +48,7 @@ const data = [
 
 
 const AirCargo = () => {
+    const { t, i18n } = useTranslation()
     return (
         <Box p={'36px 0'}>
             <Box className='container'>
@@ -55,13 +57,13 @@ const AirCargo = () => {
                     textAlign={'center'}
                     fontWeight="bold"
                     lineHeight="1.2"
-                    color="#2F2F2F">Быстро доставим груз и оформим все документы за вас</Heading>
+                    color="#2F2F2F">{t("Быстро доставим груз и оформим все документы за вас")}</Heading>
                 <SimpleGrid mt={'36px'} alignItems={'center'} columns={5}>
                     {
                         data.map((item) => (
                             <Flex flexDirection={'column'} align={'center'}>
                                 <Image src={item?.icon} />
-                                <Heading {...css.name}>{item?.title_ru}</Heading>
+                                <Heading {...css.name}>{item[`title_${i18n?.language}`]}</Heading>
                             </Flex>
                         ))
                     }
