@@ -15,7 +15,7 @@ export default function LogisticsStatistics() {
         <Box width="100%" bg="white">
             {/* Header Section */}
             <Container maxW="container.xl" py={12} textAlign="center">
-                <Heading as="h1" fontSize="4xl" fontWeight="bold" mb={4} color="gray.900">
+                <Heading as="h1" fontSize={{ base: "2xl", lg: "4xl" }} fontWeight="bold" mb={4} color="gray.900">
                     {t("Бесперебойная доставка с логистикой NOMEX")}
                 </Heading>
                 <Text fontSize="14px" color="#333" maxW="3xl" mx="auto">
@@ -29,7 +29,7 @@ export default function LogisticsStatistics() {
                     <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
                         {/* Stat 1 */}
                         <Flex direction="column" align="center">
-                            <Heading as="h2" fontSize="80px" fontWeight="600" color="#121D50" mb={6}>
+                            <Heading as="h2" fontSize={{ base: "65px", lg: "80px" }} fontWeight="600" color="#121D50" mb={{ base: 2, lg: 6 }}>
                                 5+
                             </Heading>
                             <Text textAlign="center" fontWeight="500" color="#121D50">
@@ -39,7 +39,7 @@ export default function LogisticsStatistics() {
 
                         {/* Stat 2 */}
                         <Flex direction="column" align="center">
-                            <Heading as="h2" fontSize="80px" fontWeight="600" color="#121D50" mb={6}>
+                            <Heading as="h2" fontSize={{ base: "65px", lg: "80px" }} fontWeight="600" color="#121D50"mb={{ base: 2, lg: 6 }}>
                                 10 000
                             </Heading>
                             <Text textAlign="center" fontWeight="500" color="#121D50">
@@ -49,7 +49,7 @@ export default function LogisticsStatistics() {
 
                         {/* Stat 3 */}
                         <Flex direction="column" align="center">
-                            <Heading as="h2" fontSize="80px" fontWeight="600" color="#121D50" mb={6}>
+                            <Heading as="h2" fontSize={{ base: "65px", lg: "80px" }} fontWeight="600" color="#121D50"mb={{ base: 2, lg: 6 }}>
                                 3 000+
                             </Heading>
                             <Text textAlign="center" fontWeight="500" color="#121D50">

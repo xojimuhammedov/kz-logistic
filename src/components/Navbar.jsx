@@ -2,7 +2,7 @@ import { Box, Flex, Heading, Image, Text, Link, Menu, MenuButton, MenuList, Menu
 import { useTranslation } from "react-i18next";
 
 import LogoIcon from "../assets/logo.jpg";
-// import NavbarMenu from "./NavbarMenu";
+import NavbarMenu from "./NavbarMenu";
 import { Link as Alink, useNavigate } from "react-router-dom";
 import { servicesData } from "../data";
 
@@ -37,16 +37,10 @@ function Navbar() {
                                 }
                             </MenuList>
                         </Menu>
-                        {/* <Link href={"#service"}>
-                            <Text {...css.link}>{t("Services")}</Text>
-                        </Link> */}
-                        {/* <Link href={"#partner"}>
-                            <Text {...css.link}>{t("Partners")}</Text>
-                        </Link> */}
                         <Alink to={"/contact"}>
                             <Text {...css.link}>{t("Contact")}</Text>
                         </Alink>
-                        {/* <NavbarMenu /> */}
+                        <NavbarMenu />
                     </Flex>
                 </Flex>
             </Box>

@@ -13,7 +13,7 @@ import {
 } from '@chakra-ui/react';
 // import { ArrowForwardIcon } from '@chakra-ui/icons';
 
-import TruckImage from '../assets/truck2.png'
+import TruckImage from '../assets/header-banner.jpg'
 import MapImage from '../assets/map.png'
 import { useTranslation } from 'react-i18next';
 
@@ -50,9 +50,10 @@ export default function TransportHero() {
 
             <Container maxW="container.xl" position="relative" zIndex="2">
                 <Flex
-                    direction={{ base: 'column', lg: 'row' }}
+                    direction={{ base: 'column-reverse', lg: 'row' }}
                     py={{ base: 8, md: 12 }}
                     align="center"
+                    gap={'24px'}
                 >
                     {/* Left Content */}
                     <Stack
@@ -92,30 +93,21 @@ export default function TransportHero() {
                         w={{ base: "100%", lg: "60%" }}
                         position="relative"
                     >
-                        {/* Orange accent in top right corner */}
-                        <Box
-                            position="absolute"
-                            top="20px"
-                            right="-20px"
-                            bg="#F70"
-                            height="45px"
-                            width="250px"
-                            zIndex="1"
-                        />
 
                         <Box
                             borderRadius="md"
                             overflow="hidden"
                             position="relative"
-                            left={'13%'}
+                            left={{ base: "0", lg: '13%' }}
                             zIndex="2"
                         >
                             <Image
                                 src={TruckImage}
                                 alt="Orange AXT Trucks"
-                                w="670px"
-                                h="436px"
-                                objectFit={'contain'}
+                                w={{ base: "100%", lg: "640px" }}
+                                h={{ base: "auto", lg: "410px" }}
+                                borderRadius={'16px'}
+                                objectFit={'cover'}
                             />
                         </Box>
                     </Box>
