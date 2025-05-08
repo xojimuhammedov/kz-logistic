@@ -23,3 +23,7 @@ button,
 span {
     font-family: "Manrope", sans-serif !important;
 }
+
+html {
+    scroll-behavior: smooth;
+}

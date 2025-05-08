@@ -15,9 +15,10 @@ import { Link as Alink } from "react-router-dom";
 // import WhatsappIcon from "../assets/whatsapp.png";
 
 import LogoIcon from "../assets/footer-logo.png";
+import { servicesData } from "../data";
 
 function Footer() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     return (
         <Box {...css.footer}>
             <Box className="container">
@@ -44,18 +45,16 @@ function Footer() {
                     </Flex>
                     <Flex flexDirection={"column"}>
                         <Heading {...css.title}>{t("SERVICES")}</Heading>
-                        <Alink to={"/"}>
-                            <Text {...css.link}>{t("Международные грузоперевозки")}</Text>
-                        </Alink>
-                        <Alink to={"/"}>
-                            <Text {...css.link}>{t("Складирование и обработка грузов")}</Text>
-                        </Alink>
-                        <Alink to={"/"}>
-                            <Text {...css.link}>{t("Таможенное оформление")}</Text>
-                        </Alink>
-                        <Alink to={"/"}>
-                            <Text {...css.link}>{t("Логистический консалтинг")}</Text>
-                        </Alink>
+                        {
+                            servicesData?.slice(0, 4)?.map((item) => (
+                                <Alink
+                                    onClick={() => window.scrollTo({ top: 0 })}
+                                    key={item?.id} to={`/service/${item?.id}`}>
+                                    <Text {...css.link}>{item[`title_${i18n?.language}`]}</Text>
+                                </Alink>
+                            ))
+                        }
+
                     </Flex>
                     <Flex flexDirection={"column"}>
                         <Heading {...css.title}>{t("Contact")}</Heading>
@@ -65,7 +64,7 @@ function Footer() {
                         <Link {...css.link} target="_blank" href={"tel:+77710540606"}>
                             +7 771 014 05 05
                         </Link>
-                        
+
                         {/* <Link
                             {...css.link}
                             target="_blank"

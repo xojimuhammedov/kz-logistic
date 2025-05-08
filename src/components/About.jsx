@@ -1,7 +1,7 @@
 import { Box, Button, Flex, Grid, Heading, Image, Text } from '@chakra-ui/react';
 import React from 'react';
 
-import TruckImage from '../assets/truck.png'
+import TruckImage from '../assets/truck-1.jpg'
 import { useTranslation } from 'react-i18next';
 
 const features = [
@@ -56,7 +56,7 @@ const About = () => {
                         <Image
                             src={TruckImage}
                             alt="Truck"
-                            style={{ borderRadius: "16px", maxHeight: "410px", objectFit: "cover" }}
+                            style={{ borderRadius: "16px", objectFit: "cover", height:"390px" }}
                         />
                     </Box>
                 </Flex>
