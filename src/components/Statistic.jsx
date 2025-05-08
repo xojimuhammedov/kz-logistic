@@ -16,7 +16,7 @@ export default function LogisticsStatistics() {
             {/* Header Section */}
             <Container maxW="container.xl" py={12} textAlign="center">
                 <Heading as="h1" fontSize="4xl" fontWeight="bold" mb={4} color="gray.900">
-                    {t("Бесперебойная доставка с логистикой АХТ")}
+                    {t("Бесперебойная доставка с логистикой NOMEX")}
                 </Heading>
                 <Text fontSize="14px" color="#333" maxW="3xl" mx="auto">
                     {t("Повышайте производительность и добивайтесь успеха с помощью видимости в реальном времени и автоматизации на каждом этапе вашего рабочего процесса.")}

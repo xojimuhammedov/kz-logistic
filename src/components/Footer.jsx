@@ -14,14 +14,13 @@ import { Link as Alink } from "react-router-dom";
 // import Telegram from "../assets/tg.svg";
 // import WhatsappIcon from "../assets/whatsapp.png";
 
-// import LogoIcon from "../assets/footer-logo.png";
+import LogoIcon from "../assets/footer-logo.png";
 
 function Footer() {
     const { t } = useTranslation();
     return (
         <Box {...css.footer}>
             <Box className="container">
-                Logo
                 {/* <Image {...css.image} src={LogoIcon} alt="Logo" /> */}
                 <SimpleGrid
                     {...css.box}

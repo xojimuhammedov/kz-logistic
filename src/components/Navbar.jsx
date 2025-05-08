@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Image, Text, Link, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 
-// import LogoIcon from "../assets/navbar-logo.png";
+import LogoIcon from "../assets/logo.jpg";
 // import NavbarMenu from "./NavbarMenu";
 import { Link as Alink, useNavigate } from "react-router-dom";
 import { servicesData } from "../data";
@@ -14,7 +14,7 @@ function Navbar() {
             <Box pb={'24px'} borderBottom={'1px solid rgba(51, 51, 51, 0.20)'} className="container">
                 <Flex justifyContent={"space-between"} align={"center"}>
                     <Alink to={"/"}>
-                        Logo
+                        <Image {...css.image} src={LogoIcon} />
                     </Alink>
                     <Flex align={"center"} gap={{ base: "16px", lg: "32px" }}>
                         <Alink to={"/"}>
@@ -27,9 +27,6 @@ function Navbar() {
                                 <MenuItem onClick={() => navigate('/autoparc')} fontSize={'14px'} color={'rgba(0, 0, 0, 1)'} fontWeight={'600'}>{t("Автопарк")}</MenuItem>
                             </MenuList>
                         </Menu>
-                        {/* <Alink to={"/company"}>
-                            <Text {...css.link}>{t("About")}</Text>
-                        </Alink> */}
                         <Menu isLazy>
                             <MenuButton {...css.link}>{t("Services")}</MenuButton>
                             <MenuList>
@@ -75,4 +72,7 @@ const css = {
         height: "100px",
         objectFit: "contain",
     },
+    image: {
+        width: "180px"
+    }
 };
