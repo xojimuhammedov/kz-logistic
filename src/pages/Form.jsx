@@ -2,6 +2,7 @@ import { Box, Button, Flex, Heading, Input, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { toast } from "react-toastify";
+import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 
 function Form() {
     const { t } = useTranslation();
@@ -133,12 +134,17 @@ function Form() {
                             {t("Рассчитать")}
                         </Button>
                     </Box>
-                    <iframe
+                    <YMaps>
+                        <Map defaultState={{ center: [47.112570, 51.903453], zoom: 9 }} width="100%" height="auto">
+                            <Placemark geometry={[47.112570, 51.903453]} />
+                        </Map>
+                    </YMaps>
+                    {/* <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2715.3103515694324!2d51.89098498774162!3d47.11258899675808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41a3e9904dcef067%3A0x4f5e9ce1ca3f296c!2sGagarin%20St%2065%2C%20Atyrau%2C%20Kazakhstan!5e0!3m2!1sen!2s!4v1745735616688!5m2!1sen!2s" className="form-map"
                         style={{ border: "0" }}
                         allowFullScreen=""
                         loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        referrerPolicy="no-referrer-when-downgrade"></iframe> */}
                 </Flex>
             </Box>
         </Box>

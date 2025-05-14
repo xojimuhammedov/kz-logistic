@@ -60,6 +60,11 @@ const css = {
             base: "none",
             lg: "block",
         },
+        transition: "0.3s",
+
+        _hover: {
+            color: "#F70"
+        }
     },
     icon: {
         width: "220px",

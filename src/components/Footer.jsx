@@ -10,9 +10,9 @@ import {
 import { useTranslation } from "react-i18next";
 import { Link as Alink } from "react-router-dom";
 
-// import Instagram from "../assets/instagram.svg";
-// import Telegram from "../assets/tg.svg";
-// import WhatsappIcon from "../assets/whatsapp.png";
+import Instagram from "../assets/instagram.svg";
+import Telegram from "../assets/tg.svg";
+import WhatsappIcon from "../assets/whatsapp.png";
 
 import LogoIcon from "../assets/footer-logo.png";
 import { servicesData } from "../data";
@@ -29,7 +29,6 @@ function Footer() {
                     spacing={10}>
                     <Flex flexDirection={"column"}>
                         <Heading {...css.title}>{t("INFORMATION")}</Heading>
-
                         <Alink onClick={() => window.scrollTo(0, 0)} to={"/company"}>
                             <Text {...css.link}>{t("About")}</Text>
                         </Alink>
@@ -65,12 +64,18 @@ function Footer() {
                             +7 771 014 05 05
                         </Link>
 
-                        {/* <Link
+                        <Link
                             {...css.link}
                             target="_blank"
-                            href={"mailto:sultanbek.asilbek@gmail.com"}>
-                            sultanbek.asilbek@gmail.com
-                        </Link> */}
+                            href={"mailto:nomexlogistics.kz@mail.ru"}>
+                            nomexlogistics.kz@mail.ru
+                        </Link>
+                        <Link
+                            {...css.link}
+                            target="_blank"
+                            href={"mailto:nomexlogistics.kz@gmail.com"}>
+                            nomexlogistics.kz@gmail.com
+                        </Link>
                         <Link
                             target="_blank"
                             {...css.link}
@@ -83,17 +88,17 @@ function Footer() {
                     <Flex flexDirection={"column"}>
                         <Heading {...css.title}>{t("FOLLOW US ON SOCIAL MEDIA")}</Heading>
                         <Text {...css.link}>{t("Join Us")}</Text>
-                        {/* <Flex gap={"12px"}>
-                            <Link href="/">
+                        <Flex gap={"12px"}>
+                            <Link target="_blank" href="https://www.instagram.com/nomexlogistics.kz/">
                                 <Image {...css.icon} src={Instagram} alt="Instagram" />
                             </Link>
-                            <Link target="_blank" href="https://t.me/aslgkz">
+                            <Link target="_blank" href="https://t.me/+77014343431">
                                 <Image {...css.icon} src={Telegram} alt="Telegram" />
                             </Link>
-                            <Link target="_blank" href="https://wa.me/+77753378595">
+                            <Link target="_blank" href="https://wa.me/+77014343431">
                                 <Image {...css.icon} src={WhatsappIcon} alt="WhatsappIcon" />
                             </Link>
-                        </Flex> */}
+                        </Flex>
                     </Flex>
                 </SimpleGrid>
                 <Text
@@ -114,7 +119,7 @@ export default Footer;
 const css = {
     footer: {
         background: "#F70",
-        padding: "40px 0",
+        padding: "20px 0",
     },
     title: {
         color: "#fff",
@@ -138,7 +143,7 @@ const css = {
     box: {
         borderBottom: "1px solid #fff",
         padding: "48px 0",
-        borderTop: "1px solid #fff",
+        // borderTop: "1px solid #fff",
     },
     icon: {
         width: "25px",

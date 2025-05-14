@@ -11,135 +11,138 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import FadeInSection from "./FadeInSection";
 
 function Question() {
     const { t } = useTranslation();
     return (
-        <Box {...css.about}>
-            <Box className="container">
-                <Heading {...css.subname}>{t("FAQs")}</Heading>
-                <Flex
-                    flexDirection={{ base: "column", md: "row" }}
-                    align={"center"}
-                    justify={"space-between"}>
-                    <Heading {...css.title}>{t("Часто задаваемые вопросы")}</Heading>
-                   
-                </Flex>
-                <Accordion mt={"60px"} defaultIndex={[0]} allowMultiple>
-                    <AccordionItem {...css.items}>
-                        <AccordionButton p={"20px"}>
-                            <Box as="h2" {...css.name} flex="1" textAlign="left">
-                                {t("question_title1")}
-                            </Box>
-                            <AccordionIcon />
-                        </AccordionButton>
-                        <AccordionPanel {...css.text} pb={4}>
-                            {t("question_text1")}
-                        </AccordionPanel>
-                    </AccordionItem>
+        <FadeInSection direction="up" delay={0.8}>
+            <Box {...css.about}>
+                <Box className="container">
+                    <Heading {...css.subname}>{t("FAQs")}</Heading>
+                    <Flex
+                        flexDirection={{ base: "column", md: "row" }}
+                        align={"center"}
+                        justify={"space-between"}>
+                        <Heading {...css.title}>{t("Часто задаваемые вопросы")}</Heading>
 
-                    <AccordionItem {...css.items}>
-                        <AccordionButton p={"20px"}>
-                            <Box as="h2" {...css.name} flex="1" textAlign="left">
-                                {t("question_title2")}{" "}
-                            </Box>
-                            <AccordionIcon />
-                        </AccordionButton>
-                        <AccordionPanel {...css.text} pb={4}>
-                            {t("question_text2")}
-                        </AccordionPanel>
-                    </AccordionItem>
-                    <AccordionItem {...css.items}>
-                        <AccordionButton p={"20px"}>
-                            <Box as="h2" {...css.name} flex="1" textAlign="left">
-                                {t("question_title3")}{" "}
-                            </Box>
-                            <AccordionIcon />
-                        </AccordionButton>
-                        <AccordionPanel {...css.text} pb={4}>
-                            {t("question_text3")}
-                        </AccordionPanel>
-                    </AccordionItem>
-                    <AccordionItem {...css.items}>
-                        <AccordionButton p={"20px"}>
-                            <Box as="h2" {...css.name} flex="1" textAlign="left">
-                                {t("question_title4")}{" "}
-                            </Box>
-                            <AccordionIcon />
-                        </AccordionButton>
-                        <AccordionPanel {...css.text} pb={4}>
-                            {t("question_text4")}
-                        </AccordionPanel>
-                    </AccordionItem>
-                    <AccordionItem {...css.items}>
-                        <AccordionButton p={"20px"}>
-                            <Box as="h2" {...css.name} flex="1" textAlign="left">
-                                {t("question_title5")}{" "}
-                            </Box>
-                            <AccordionIcon />
-                        </AccordionButton>
-                        <AccordionPanel {...css.text} pb={4}>
-                            {t("question_text5")}
-                        </AccordionPanel>
-                    </AccordionItem>
-                    <AccordionItem {...css.items}>
-                        <AccordionButton p={"20px"}>
-                            <Box as="h2" {...css.name} flex="1" textAlign="left">
-                                {t("question_title6")}{" "}
-                            </Box>
-                            <AccordionIcon />
-                        </AccordionButton>
-                        <AccordionPanel {...css.text} pb={4}>
-                            {t("question_text6")}
-                        </AccordionPanel>
-                    </AccordionItem>
-                    <AccordionItem {...css.items}>
-                        <AccordionButton p={"20px"}>
-                            <Box as="h2" {...css.name} flex="1" textAlign="left">
-                                {t("question_title7")}{" "}
-                            </Box>
-                            <AccordionIcon />
-                        </AccordionButton>
-                        <AccordionPanel {...css.text} pb={4}>
-                            {t("question_text7")}
-                        </AccordionPanel>
-                    </AccordionItem>
-                    <AccordionItem {...css.items}>
-                        <AccordionButton p={"20px"}>
-                            <Box as="h2" {...css.name} flex="1" textAlign="left">
-                                {t("question_title8")}{" "}
-                            </Box>
-                            <AccordionIcon />
-                        </AccordionButton>
-                        <AccordionPanel {...css.text} pb={4}>
-                            {t("question_text8")}
-                        </AccordionPanel>
-                    </AccordionItem>
-                    <AccordionItem {...css.items}>
-                        <AccordionButton p={"20px"}>
-                            <Box as="h2" {...css.name} flex="1" textAlign="left">
-                                {t("question_title9")}{" "}
-                            </Box>
-                            <AccordionIcon />
-                        </AccordionButton>
-                        <AccordionPanel {...css.text} pb={4}>
-                            {t("question_text9")}
-                        </AccordionPanel>
-                    </AccordionItem>
-                    <AccordionItem {...css.items}>
-                        <AccordionButton p={"20px"}>
-                            <Box as="h2" {...css.name} flex="1" textAlign="left">
-                                {t("question_title10")}{" "}
-                            </Box>
-                            <AccordionIcon />
-                        </AccordionButton>
-                        <AccordionPanel {...css.text} pb={4}>
-                            {t("question_text10")}
-                        </AccordionPanel>
-                    </AccordionItem>
-                </Accordion>
+                    </Flex>
+                    <Accordion mt={"60px"} defaultIndex={[0]} allowMultiple>
+                        <AccordionItem {...css.items}>
+                            <AccordionButton p={"20px"}>
+                                <Box as="h2" {...css.name} flex="1" textAlign="left">
+                                    {t("question_title1")}
+                                </Box>
+                                <AccordionIcon />
+                            </AccordionButton>
+                            <AccordionPanel {...css.text} pb={4}>
+                                {t("question_text1")}
+                            </AccordionPanel>
+                        </AccordionItem>
+
+                        <AccordionItem {...css.items}>
+                            <AccordionButton p={"20px"}>
+                                <Box as="h2" {...css.name} flex="1" textAlign="left">
+                                    {t("question_title2")}{" "}
+                                </Box>
+                                <AccordionIcon />
+                            </AccordionButton>
+                            <AccordionPanel {...css.text} pb={4}>
+                                {t("question_text2")}
+                            </AccordionPanel>
+                        </AccordionItem>
+                        <AccordionItem {...css.items}>
+                            <AccordionButton p={"20px"}>
+                                <Box as="h2" {...css.name} flex="1" textAlign="left">
+                                    {t("question_title3")}{" "}
+                                </Box>
+                                <AccordionIcon />
+                            </AccordionButton>
+                            <AccordionPanel {...css.text} pb={4}>
+                                {t("question_text3")}
+                            </AccordionPanel>
+                        </AccordionItem>
+                        <AccordionItem {...css.items}>
+                            <AccordionButton p={"20px"}>
+                                <Box as="h2" {...css.name} flex="1" textAlign="left">
+                                    {t("question_title4")}{" "}
+                                </Box>
+                                <AccordionIcon />
+                            </AccordionButton>
+                            <AccordionPanel {...css.text} pb={4}>
+                                {t("question_text4")}
+                            </AccordionPanel>
+                        </AccordionItem>
+                        <AccordionItem {...css.items}>
+                            <AccordionButton p={"20px"}>
+                                <Box as="h2" {...css.name} flex="1" textAlign="left">
+                                    {t("question_title5")}{" "}
+                                </Box>
+                                <AccordionIcon />
+                            </AccordionButton>
+                            <AccordionPanel {...css.text} pb={4}>
+                                {t("question_text5")}
+                            </AccordionPanel>
+                        </AccordionItem>
+                        <AccordionItem {...css.items}>
+                            <AccordionButton p={"20px"}>
+                                <Box as="h2" {...css.name} flex="1" textAlign="left">
+                                    {t("question_title6")}{" "}
+                                </Box>
+                                <AccordionIcon />
+                            </AccordionButton>
+                            <AccordionPanel {...css.text} pb={4}>
+                                {t("question_text6")}
+                            </AccordionPanel>
+                        </AccordionItem>
+                        <AccordionItem {...css.items}>
+                            <AccordionButton p={"20px"}>
+                                <Box as="h2" {...css.name} flex="1" textAlign="left">
+                                    {t("question_title7")}{" "}
+                                </Box>
+                                <AccordionIcon />
+                            </AccordionButton>
+                            <AccordionPanel {...css.text} pb={4}>
+                                {t("question_text7")}
+                            </AccordionPanel>
+                        </AccordionItem>
+                        <AccordionItem {...css.items}>
+                            <AccordionButton p={"20px"}>
+                                <Box as="h2" {...css.name} flex="1" textAlign="left">
+                                    {t("question_title8")}{" "}
+                                </Box>
+                                <AccordionIcon />
+                            </AccordionButton>
+                            <AccordionPanel {...css.text} pb={4}>
+                                {t("question_text8")}
+                            </AccordionPanel>
+                        </AccordionItem>
+                        <AccordionItem {...css.items}>
+                            <AccordionButton p={"20px"}>
+                                <Box as="h2" {...css.name} flex="1" textAlign="left">
+                                    {t("question_title9")}{" "}
+                                </Box>
+                                <AccordionIcon />
+                            </AccordionButton>
+                            <AccordionPanel {...css.text} pb={4}>
+                                {t("question_text9")}
+                            </AccordionPanel>
+                        </AccordionItem>
+                        <AccordionItem {...css.items}>
+                            <AccordionButton p={"20px"}>
+                                <Box as="h2" {...css.name} flex="1" textAlign="left">
+                                    {t("question_title10")}{" "}
+                                </Box>
+                                <AccordionIcon />
+                            </AccordionButton>
+                            <AccordionPanel {...css.text} pb={4}>
+                                {t("question_text10")}
+                            </AccordionPanel>
+                        </AccordionItem>
+                    </Accordion>
+                </Box>
             </Box>
-        </Box>
+        </FadeInSection>
     );
 }
 

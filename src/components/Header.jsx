@@ -80,6 +80,7 @@ export default function TransportHero() {
                             <Link
                                 href='tel:+77710140505'
                                 // size="lg"
+                                target='_blank'
                                 {...css.button}
                                 px={6}
                             >
@@ -127,8 +128,9 @@ const css = {
         height: "45px",
         display: "flex",
         alignItems: "center",
-        width: "200px",
+        width: "190px",
         justifyContent: "center",
+        borderRadius:"12px",
 
         _hover: {
             background: "#F70",
