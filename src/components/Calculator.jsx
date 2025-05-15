@@ -1,6 +1,7 @@
 import { Box, Button, Input, SimpleGrid, Text } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { toast } from 'react-toastify';
 
 // 7930081170:AAGiqI6T4ypKPVjEJs6byiqtJ5c9D5gdqU4
 // -1002598680954
@@ -125,7 +126,7 @@ const Calculator = () => {
                         onChange={(e) => changeCompany(e.target.value)}
                         className='header-input' type="text" placeholder={t("Company")} />
                 </SimpleGrid>
-                <Button {...css.button} >
+                <Button onClick={sendMessage} {...css.button} >
                     {t("Рассчитать")}
                 </Button>
             </form>
