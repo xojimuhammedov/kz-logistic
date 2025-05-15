@@ -46,6 +46,54 @@
     border-radius: 10px;
 }
 
-a:hover{
+a:hover {
     text-decoration: none !important;
+}
+
+.modal-label {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 22px;
+    margin: 12px 0;
+}
+
+.modal-input {
+    width: 100%;
+    height: 50px !important;
+    background-color: #f1f1f1 !important;
+    border: 1px solid #f1f1f1 !important;
+    border-radius: 10px !important;
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+
+.modal-input:focus {
+    border: 1px solid #F70 !important;
+}
+
+.modal-input:focus-visible {
+    box-shadow: none !important;
+}
+
+.modal-inputs input {
+    width: 100%;
+    height: 50px !important;
+    background-color: #f1f1f1 !important;
+    border: 1px solid #f1f1f1 !important;
+    border-radius: 10px !important;
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+
+.modal-inputs input:focus {
+    border: 1px solid #F70 !important;
+}
+
+.modal-inputs input:focus-visible {
+    box-shadow: none !important;
 }

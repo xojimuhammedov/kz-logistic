@@ -3,8 +3,10 @@ import React from 'react';
 import Language from './Language';
 import { Mail, Phone } from 'lucide-react';
 import WhatsappIcon from "../assets/whatsapp.png";
+import { useTranslation } from 'react-i18next';
 
 const Nav = () => {
+    const { t } = useTranslation()
     return (
         <Box p={'18px 0'}>
             <Box className='container'>
@@ -18,7 +20,7 @@ const Nav = () => {
                     <Language />
                     <Link {...css.phone}>
                         <Phone width='18px' />
-                        Позвонить
+                        {t("Позвонить")}
                     </Link>
                     <Link {...css.whatsapp}>
                         <Image w={'20px'} src={WhatsappIcon} />

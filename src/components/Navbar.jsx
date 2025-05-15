@@ -22,10 +22,10 @@ function Navbar() {
                         </Alink>
                         <Menu isLazy>
                             <MenuButton {...css.link}>{t("About")}</MenuButton>
-                            <MenuList>
+                            {/* <MenuList>
                                 <MenuItem onClick={() => navigate('/company')} fontSize={'14px'} color={'rgba(0, 0, 0, 1)'} fontWeight={'600'}>{t("About")}</MenuItem>
                                 <MenuItem onClick={() => navigate('/autoparc')} fontSize={'14px'} color={'rgba(0, 0, 0, 1)'} fontWeight={'600'}>{t("Автопарк")}</MenuItem>
-                            </MenuList>
+                            </MenuList> */}
                         </Menu>
                         <Menu isLazy>
                             <MenuButton {...css.link}>{t("Services")}</MenuButton>

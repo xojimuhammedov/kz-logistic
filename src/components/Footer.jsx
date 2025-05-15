@@ -64,12 +64,12 @@ function Footer() {
                             +7 771 014 05 05
                         </Link>
 
-                        <Link
+                        {/* <Link
                             {...css.link}
                             target="_blank"
                             href={"mailto:nomexlogistics.kz@mail.ru"}>
                             nomexlogistics.kz@mail.ru
-                        </Link>
+                        </Link> */}
                         <Link
                             {...css.link}
                             target="_blank"

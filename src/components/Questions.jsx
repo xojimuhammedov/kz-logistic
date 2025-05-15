@@ -25,7 +25,6 @@ function Question() {
                         align={"center"}
                         justify={"space-between"}>
                         <Heading {...css.title}>{t("Часто задаваемые вопросы")}</Heading>
-
                     </Flex>
                     <Accordion mt={"60px"} defaultIndex={[0]} allowMultiple>
                         <AccordionItem {...css.items}>
