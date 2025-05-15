@@ -19,6 +19,8 @@ import MapImage from '../assets/map.png'
 import { useTranslation } from 'react-i18next';
 import RequestModal from './RequestModal';
 
+import HeaderBannerImage from '../assets/headerbanner.jpg'
+
 export default function TransportHero() {
     const { t } = useTranslation()
     const { isOpen, onOpen, onClose } = useDisclosure()
