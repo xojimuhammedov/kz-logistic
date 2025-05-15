@@ -11,7 +11,7 @@ function Navbar() {
     const navigate = useNavigate()
     return (
         <Box>
-            <Box pb={'24px'} borderBottom={'1px solid rgba(51, 51, 51, 0.20)'} className="container">
+            <Box pb={'12px'} borderBottom={'1px solid rgba(51, 51, 51, 0.20)'} className="container">
                 <Flex justifyContent={"space-between"} align={"center"}>
                     <Alink to={"/"}>
                         <Image {...css.image} src={LogoIcon} />

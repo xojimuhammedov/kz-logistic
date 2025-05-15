@@ -97,3 +97,41 @@ a:hover {
 .modal-inputs input:focus-visible {
     box-shadow: none !important;
 }
+
+.header-input {
+    background-color: #f1f1f1 !important;
+    border-radius: 10px !important;
+    height: 40px !important;
+    padding: 10px 15px !important;
+    width: 100% !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #303030 !important;
+    box-sizing: border-box !important;
+}
+
+.header-input:focus {
+    border: 1px solid #F70 !important;
+}
+
+.header-input:focus-visible {
+    box-shadow: none !important;
+}
+
+.header-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.header-label {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+.header-input::placeholder{
+    font-size: 14px;
+    font-weight: 600;
+}

@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 const Nav = () => {
     const { t } = useTranslation()
     return (
-        <Box p={'18px 0'}>
+        <Box p={'12px 0'}>
             <Box className='container'>
                 <Flex align={'center'} gap={'18px'} justify={'flex-end'}>
                     <Flex alignitems={'center'} gap={'2px'}>

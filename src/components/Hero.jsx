@@ -28,7 +28,6 @@ const Hero = ({ data }) => {
                 overflow="hidden"
                 bg="white"
             >
-                {/* Background World Map */}
                 <Box
                     position="absolute"
                     width="100%"
