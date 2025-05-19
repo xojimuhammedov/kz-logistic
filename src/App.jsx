@@ -11,6 +11,11 @@ import Navbar from './components/Navbar'
 import Nav from './components/Nav'
 import ServicesAbout from './pages/ServicesAbout'
 import VehicleShowcase from './components/AutoParc'
+import { Image, Link } from '@chakra-ui/react'
+
+import WhatsappIcon from "./assets/whatsapp.png";
+import { Box, Phone } from 'lucide-react'
+
 
 function App() {
 
@@ -31,8 +36,30 @@ function App() {
         <Route path='/autoparc' element={<VehicleShowcase />} />
       </Routes>
       <Footer />
+        <Link
+          target="_blank"
+          className="position-whatsapp" href="https://wa.me/+998770008700">
+          <Image src={WhatsappIcon} w={'40px'} />
+        </Link>
+        <Link className="position-phone" target='_blank' href='tel:+77710140505' {...css.phone}>
+          <Phone width='28px' />
+        </Link>
     </>
   )
 }
 
 export default App
+
+const css = {
+  phone: {
+    width: "64px",
+    display: "flex",
+    height: "64px",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "#fff",
+    borderRadius: "50%",
+    background: "#F70",
+    border: "1px solid #F70",
+  },
+}
