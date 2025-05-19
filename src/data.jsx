@@ -1,5 +1,5 @@
 import ServiceOne from './assets/service10.png'
-import ServiceTwo from './assets/service2.png'
+import ServiceTwo from './assets/service11.webp'
 import ServiceThree from './assets/service10.jpg'
 import ServiceFour from './assets/service4.png'
 import ServiceFive from './assets/service5.png'

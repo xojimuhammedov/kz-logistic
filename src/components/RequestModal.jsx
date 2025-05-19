@@ -14,10 +14,59 @@ import {
 import { useTranslation } from 'react-i18next';
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
+import { toast } from 'react-toastify';
 
 const RequestModal = ({ isOpen, onClose }) => {
-    const [value, setValue] = useState()
     const { t } = useTranslation()
+    const [nameValue, setNameValue] = useState("");
+    const [numberValue, setNumberValue] = useState("");
+
+    function changeNumber(item) {
+        setNumberValue(item);
+    }
+
+    function changeName(item) {
+        setNameValue(item);
+    }
+    const handleClear = () => {
+        setNameValue("");
+        setNumberValue("");
+    };
+    let bot = {
+        TOKEN: "7930081170:AAGiqI6T4ypKPVjEJs6byiqtJ5c9D5gdqU4",
+        chatID: "-1002598680954",
+        message: `
+              Здравствуйте, для вас консультацию!
+              Имя 👤: ${nameValue}; 
+              Номер телефона ☎: ${numberValue};
+              `,
+    };
+
+    const encodedMessage = encodeURIComponent(bot.message);
+
+    function sendMessage(e) {
+        e.preventDefault();
+        if (!nameValue || !numberValue) {
+            toast.error(t("Пожалуйста, заполните все поля!"));
+            return;
+        }
+
+        fetch(
+            `https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${encodedMessage} `,
+            {
+                method: "GET",
+            }
+        ).then(
+            () => {
+                handleClear();
+                onClose()
+                toast.success(t("Ваше сообщение успешно отправлено!"));
+            },
+            (error) => {
+                console.log(error);
+            }
+        );
+    }
     return (
         <Modal isCentered isOpen={isOpen} onClose={onClose}>
             <ModalOverlay />
@@ -29,17 +78,23 @@ const RequestModal = ({ isOpen, onClose }) => {
                     <form action="">
                         <label className='modal-label' htmlFor="name">
                             {t("Your Name")}
-                            <Input className='modal-input' type="text" id='name' />
+                            <Input
+                                value={nameValue}
+                                onChange={(e) => changeName(e.target.value)}
+                                className='modal-input' type="text" id='name' />
                         </label>
                         <label style={{ marginBottom: 0 }} className='modal-label' htmlFor="phone">
                             {t("Your Phone")}
-                            <Input className='modal-input' type="tell" id='phone' />
+                            <Input
+                                value={numberValue}
+                                onChange={(e) => changeNumber(e.target.value)}
+                                className='modal-input' type="tell" id='phone' />
                         </label>
                     </form>
                 </ModalBody>
 
                 <ModalFooter pt={0} mt={0}>
-                    <Button {...css.button} >
+                    <Button onClick={sendMessage} {...css.button} >
                         {t("Заказать звонок")}
                     </Button>
                 </ModalFooter>

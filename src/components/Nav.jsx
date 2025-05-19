@@ -11,18 +11,18 @@ const Nav = () => {
         <Box p={'12px 0'}>
             <Box className='container'>
                 <Flex align={'center'} gap={'18px'} justify={'flex-end'}>
-                    <Flex alignitems={'center'} gap={'2px'}>
+                    <Flex display={{ base: "none", lg: "flex" }} alignitems={'center'} gap={'2px'}>
                         <Mail width={'16px'} color='rgba(0, 0, 0, 1)' />
                         <Link target='_blank' {...css.link} href='mailto:nomexlogistics.kz@mail.ru'>
                             nomexlogistics.kz@mail.ru
                         </Link>
                     </Flex>
                     <Language />
-                    <Link {...css.phone}>
+                    <Link target='_blank' href='tel:+77710140505' {...css.phone}>
                         <Phone width='18px' />
                         {t("Позвонить")}
                     </Link>
-                    <Link {...css.whatsapp}>
+                    <Link target="_blank" href="https://wa.me/+77014343431" {...css.whatsapp}>
                         <Image w={'20px'} src={WhatsappIcon} />
                         WhatsApp
                     </Link>
@@ -45,7 +45,10 @@ const css = {
         background: "#25d366",
         border: "1px solid #25d366",
         width: "145px",
-        display: "flex",
+        display: {
+            base: "none",
+            lg: "flex"
+        },
         height: "45px",
         alignItems: "center",
         color: "#fff",
@@ -58,7 +61,10 @@ const css = {
     },
     phone: {
         width: "145px",
-        display: "flex",
+        display: {
+            base: "none",
+            lg: "flex"
+        },
         height: "45px",
         alignItems: "center",
         color: "#fff",

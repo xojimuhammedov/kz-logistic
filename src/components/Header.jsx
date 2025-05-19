@@ -32,33 +32,11 @@ export default function TransportHero() {
                 backgroundImage={HeaderBannerImage}
                 backgroundRepeat={'no-repeat'}
                 backgroundSize={'cover'}
-                height={'90vh'}
+                height={{ base: "100vh", lg: '90vh' }}
             >
-                {/* Background World Map */}
-                {/* <Box
-                    position="absolute"
-                    width="100%"
-                    height="100%"
-                    opacity="1"
-                    zIndex="1"
-                >
-                    <Box
-                        as="div"
-                        bgImage={MapImage}
-                        bgPosition="center"
-                        bgSize="cover"
-                        position="absolute"
-                        width="50%"
-                        height="100%"
-                        left={'10%'}
-                        opacity="0.7"
-                        top={'10%'}
-                    />
-                </Box> */}
-
                 <Container maxW="container.xl" zIndex="2">
                     <Flex
-                        direction={{ base: 'column-reverse', lg: 'row' }}
+                        direction={{ base: 'column', lg: 'row' }}
                         py={{ base: 8, md: 12 }}
                         justifyContent={'space-between'}
                         alignItems="center"
@@ -70,7 +48,7 @@ export default function TransportHero() {
                             maxW={{ base: "100%", lg: "40%" }}
                             pr={{ base: 0, lg: 8 }}
                             mb={{ base: 8, lg: 0 }}
-                            mt={'72px'}
+                            mt={{ base: "0", lg: '72px' }}
                         >
                             <Heading
                                 as="h1"
@@ -101,27 +79,9 @@ export default function TransportHero() {
                         <Box
                             w={{ base: "100%", lg: "60%" }}
                             maxW={'480px'}
-                            position="relative"
-                            mt={'72px'}
+                            mt={{ base: "0", lg: '72px' }}
                         >
                             <Calculator />
-
-                            {/* <Box
-                                borderRadius="md"
-                                overflow="hidden"
-                                position="relative"
-                                left={{ base: "0", lg: '13%' }}
-                                zIndex="2"
-                            >
-                                <Image
-                                    src={TruckImage}
-                                    alt="Orange AXT Trucks"
-                                    w={{ base: "100%", lg: "640px" }}
-                                    h={{ base: "auto", lg: "410px" }}
-                                    borderRadius={'16px'}
-                                    objectFit={'cover'}
-                                />
-                            </Box> */}
                         </Box>
                     </Flex>
                 </Container>

@@ -43,8 +43,8 @@ function Form() {
         setEmail("");
     };
     let bot = {
-        TOKEN: "8050907392:AAGe_5c4l2KyI2l1cm9WM-oad3totFzUeVg",
-        chatID: "-1002323257681",
+        TOKEN: "7930081170:AAGiqI6T4ypKPVjEJs6byiqtJ5c9D5gdqU4",
+        chatID: "-1002598680954",
         message: `
           Здравствуйте, для вас новые новости!
           Имя 👤: ${nameValue}; 
@@ -60,6 +60,10 @@ function Form() {
 
     function sendMessage(e) {
         e.preventDefault();
+        if (!nameValue || !country || !location || !textValue || !numberValue) {
+            toast.error(t("Пожалуйста, заполните все поля!"));
+            return;
+        }
 
         fetch(
             `https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${encodedMessage} `,

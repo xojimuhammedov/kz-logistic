@@ -68,6 +68,10 @@ const Calculator = () => {
 
     function sendMessage(e) {
         e.preventDefault();
+        if (!nameValue || !country || !location || !textValue || !numberValue || !email || !company) {
+            toast.error(t("Пожалуйста, заполните все поля!"));
+            return;
+        }
 
         fetch(
             `https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${encodedMessage} `,
