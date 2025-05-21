@@ -38,7 +38,7 @@ function App() {
       <Footer />
         <Link
           target="_blank"
-          className="position-whatsapp" href="https://wa.me/+998770008700">
+          className="position-whatsapp" href="https://wa.me/+77014343431">
           <Image src={WhatsappIcon} w={'40px'} />
         </Link>
         <Link className="position-phone" target='_blank' href='tel:+77710140505' {...css.phone}>
