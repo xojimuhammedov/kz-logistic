@@ -22,7 +22,7 @@ const Nav = () => {
                         <Phone width='18px' />
                         {t("Позвонить")}
                     </Link>
-                    <Link target="_blank" href="https://wa.me/+77014343431" {...css.whatsapp}>
+                    <Link target="_blank" href="https://wa.me/+77710140505" {...css.whatsapp}>
                         <Image w={'20px'} src={WhatsappIcon} />
                         WhatsApp
                     </Link>

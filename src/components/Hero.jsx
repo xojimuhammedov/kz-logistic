@@ -11,8 +11,6 @@ import {
     Image,
     useDisclosure,
 } from '@chakra-ui/react';
-
-import TruckImage from '../assets/truck2.png'
 import MapImage from '../assets/map.png'
 import { useTranslation } from 'react-i18next';
 import RequestModal from './RequestModal';
@@ -25,15 +23,16 @@ const Hero = ({ data }) => {
             <Box
                 w="100%"
                 position="relative"
-                overflow="hidden"
-                bg="white"
+                // overflow="hidden"
+                bgImage={MapImage}
+                backgroundSize={'contain'}
             >
-                <Box
+                {/* <Box
                     position="absolute"
                     width="100%"
                     height="100%"
                     opacity="1"
-                    zIndex="1"
+                    zIndex="2"
                 >
                     <Box
                         as="div"
@@ -47,7 +46,7 @@ const Hero = ({ data }) => {
                         opacity="0.7"
                         top={'10%'}
                     />
-                </Box>
+                </Box> */}
 
                 <Container maxW="container.xl" position="relative" zIndex="2">
                     <Flex
@@ -95,7 +94,7 @@ const Hero = ({ data }) => {
                                 overflow="hidden"
                                 position="relative"
                                 left={'13%'}
-                                zIndex="2"
+                                zIndex="9999999"
                             >
                                 <Image
                                     src={data?.image}

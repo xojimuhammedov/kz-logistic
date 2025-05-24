@@ -95,7 +95,7 @@ function Footer() {
                             <Link target="_blank" href="https://t.me/+77014343431">
                                 <Image {...css.icon} src={Telegram} alt="Telegram" />
                             </Link>
-                            <Link target="_blank" href="https://wa.me/+77014343431">
+                            <Link target="_blank" href="https://wa.me/+77710140505">
                                 <Image {...css.icon} src={WhatsappIcon} alt="WhatsappIcon" />
                             </Link>
                         </Flex>
