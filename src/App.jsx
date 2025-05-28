@@ -21,8 +21,10 @@ function App() {
 
   return (
     <>
-      <Nav />
-      <Navbar />
+      <div className='app-list'>
+        <Nav />
+        <Navbar />
+      </div>
       <Routes>
         <Route path='/' element={<>
           <TransportHero />
@@ -36,14 +38,14 @@ function App() {
         <Route path='/autoparc' element={<VehicleShowcase />} />
       </Routes>
       <Footer />
-        <Link
-          target="_blank"
-          className="position-whatsapp" href="https://wa.me/+77710140505">
-          <Image src={WhatsappIcon} w={'40px'} />
-        </Link>
-        <Link className="position-phone" target='_blank' href='tel:+77710140505' {...css.phone}>
-          <Phone width='28px' />
-        </Link>
+      <Link
+        target="_blank"
+        className="position-whatsapp" href="https://wa.me/+77710540606">
+        <Image src={WhatsappIcon} w={'40px'} />
+      </Link>
+      <Link className="position-phone" target='_blank' href='tel:+77710540606' {...css.phone}>
+        <Phone width='28px' />
+      </Link>
     </>
   )
 }
@@ -62,4 +64,12 @@ const css = {
     background: "#F70",
     border: "1px solid #F70",
   },
+  app: {
+    position: "fixed",
+    width: "100%",
+    bottom:"0",
+    top:"0",
+    left:"0",
+    zIndex: "99999"
+  }
 }

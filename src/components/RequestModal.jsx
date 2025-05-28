@@ -13,7 +13,6 @@ import {
 } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next';
 import 'react-phone-number-input/style.css'
-import PhoneInput from 'react-phone-number-input'
 import { toast } from 'react-toastify';
 
 const RequestModal = ({ isOpen, onClose }) => {

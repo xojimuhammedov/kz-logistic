@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Image, Text, Link, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 
-import LogoIcon from "../assets/logo.jpg";
+import LogoIcon from "../assets/new-logo.jpg";
 import NavbarMenu from "./NavbarMenu";
 import { Link as Alink, useNavigate } from "react-router-dom";
 import { servicesData } from "../data";
@@ -20,13 +20,13 @@ function Navbar() {
                         <Alink to={"/"}>
                             <Text {...css.link}>{t("Home")}</Text>
                         </Alink>
-                        <Menu isLazy>
+                        <Alink to={"/"}>
+                            <Text {...css.link}>{t("About")}</Text>
+                        </Alink>
+                        {/* <Menu isLazy>
                             <MenuButton {...css.link}>{t("About")}</MenuButton>
-                            {/* <MenuList>
-                                <MenuItem onClick={() => navigate('/company')} fontSize={'14px'} color={'rgba(0, 0, 0, 1)'} fontWeight={'600'}>{t("About")}</MenuItem>
-                                <MenuItem onClick={() => navigate('/autoparc')} fontSize={'14px'} color={'rgba(0, 0, 0, 1)'} fontWeight={'600'}>{t("Автопарк")}</MenuItem>
-                            </MenuList> */}
-                        </Menu>
+                           
+                        </Menu> */}
                         <Menu isLazy>
                             <MenuButton {...css.link}>{t("Services")}</MenuButton>
                             <MenuList>
@@ -72,6 +72,8 @@ const css = {
         objectFit: "contain",
     },
     image: {
-        width: "180px"
+        // width: "180px",
+        height:"80px",
+        objectFit:"contain"
     }
 };

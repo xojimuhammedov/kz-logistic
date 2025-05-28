@@ -14,6 +14,14 @@
     margin: 8px 0;
 }
 
+.app-list {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    background-color: white;
+}
+
 .form-input::placeholder {
     color: var(--Input-text, #8e8e8e);
     font-size: 16px;
@@ -131,7 +139,8 @@ a:hover {
     font-size: 14px !important;
     font-weight: 600 !important;
 }
-.header-input::placeholder{
+
+.header-input::placeholder {
     font-size: 14px;
     font-weight: 600;
 }

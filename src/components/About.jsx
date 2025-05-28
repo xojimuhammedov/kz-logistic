@@ -1,7 +1,6 @@
-import { Box, Button, Flex, Grid, Heading, Image, Text, Link } from '@chakra-ui/react';
-import React from 'react';
+import { Box, Flex, Grid, Heading, Image, Text, Link } from '@chakra-ui/react';
 
-import TruckImage from '../assets/truck-1.jpg'
+import TruckImage from '../assets/company-image.jpg'
 import { useTranslation } from 'react-i18next';
 
 import { motion } from 'framer-motion';

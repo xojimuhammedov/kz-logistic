@@ -21,6 +21,7 @@ const Hero = ({ data }) => {
     return (
         <>
             <Box
+             mt={'180px'}
                 w="100%"
                 position="relative"
                 // overflow="hidden"

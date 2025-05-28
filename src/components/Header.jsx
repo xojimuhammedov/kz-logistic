@@ -7,15 +7,8 @@ import {
     Heading,
     Text,
     Stack,
-    Icon,
-    Image,
-    Link,
     useDisclosure,
 } from '@chakra-ui/react';
-// import { ArrowForwardIcon } from '@chakra-ui/icons';
-
-import TruckImage from '../assets/header-banner.jpg'
-import MapImage from '../assets/map.png'
 import { useTranslation } from 'react-i18next';
 import RequestModal from './RequestModal';
 
@@ -28,6 +21,7 @@ export default function TransportHero() {
     return (
         <>
             <Box
+                mt={'180px'}
                 w="100%"
                 backgroundImage={HeaderBannerImage}
                 backgroundRepeat={'no-repeat'}
@@ -110,5 +104,3 @@ const css = {
         }
     }
 }
-
-{/* https://demosoledad.pencidesign.net/soledad-logistics-business-multipurpose/wp-content/uploads/sites/45/2019/09/6.jpg */ }

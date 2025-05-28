@@ -25,9 +25,9 @@ const data = [
     },
     {
         id: 3,
-        title_ru: "Склад в г. Алматы",
-        title_en: "Warehouse in Almaty",
-        title_kz: "Алматы қаласындағы қойма",
+        title_ru: "Склад в городе Атырау",
+        title_en: "Warehouse in Atyrau",
+        title_kz: "Атырау қаласындағы қойма",
         icon: IconThree
     },
     {

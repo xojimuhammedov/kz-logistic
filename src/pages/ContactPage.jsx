@@ -8,7 +8,7 @@ function ContactPage() {
     const { t } = useTranslation();
     return (
         <>
-            <Box
+            {/* <Box
                 p={{
                     base: "18px 0",
                     lg: "30px 0",
@@ -23,7 +23,7 @@ function ContactPage() {
                         <Heading {...css.title}>{t("Reach Out to Us Anytime")}</Heading>
                     </Flex>
                 </Box>
-            </Box>
+            </Box> */}
             <Form />
         </>
     );

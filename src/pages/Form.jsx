@@ -82,7 +82,7 @@ function Form() {
         );
     }
     return (
-        <Box pb={{ base: "36px" }}>
+        <Box  mt={'180px'} p={{ base: "36px 0" }}>
             <Box {...css.form} className="container">
                 <Flex
                     flexDirection={{ base: "column", md: "row" }}
