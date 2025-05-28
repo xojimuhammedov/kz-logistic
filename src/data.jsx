@@ -42,7 +42,7 @@ export const servicesData = [
         title_ru: "Железнодорожные перевозки",
         title_kz: "Теміржол тасымалдаулары",
         title_en: "Rail Transportation",
-        image: ServiceThree,
+        image: 'https://lissin.kz/wp-content/uploads/2014/07/DSC_6585_wm.jpg',
         description_ru:
             `Железнодорожные перевозки – это надежный и эффективный способ доставки грузов как внутри страны, так и за ее пределами. <br /> Железнодорожные перевозки грузов из Китая в страны СНГ и Европы с компанией NOMEX Logistics могут включать разнообразные услуги и решения, учитывающие особенности маршрутов, типов вагонов и требований к грузу.
 <br /> Мы можем предоставить услуги по подготовке и управлению всеми необходимыми документами для железнодорожной перевозки. Это может включать помощь в заполнении накладных, подготовке таможенных документов и обеспечении соответствия всех формальностей.`,
@@ -140,4 +140,71 @@ export const servicesData = [
         description_en:
             "Warehouse storage of cargo in Almaty with NOMEX Logistics is an essential service for companies seeking reliable and efficient storage solutions for their goods.",
     },
+];
+
+
+export const data = [
+  {
+    id: 1,
+    title_ru: "Консультация и планирование",
+    title_en: "Consultation and Planning",
+    title_kz: "Кеңес беру және жоспарлау",
+    text_ru: `— Оценка потребностей: анализ ваших требований, включая тип и объем груза, сроки доставки и особенности маршрута.<br/>— Разработка плана перевозки: составление оптимального маршрута с учетом всех логистических факторов, таких как дорожные условия, таможенные процедуры (для международных перевозок), и требования безопасности.`,
+    text_en: `— Needs assessment: analysis of your requirements, including cargo type and volume, delivery timeframes, and route specifics.<br/>— Transportation planning: creating the optimal route considering all logistics factors such as road conditions, customs procedures (for international shipments), and safety requirements.`,
+    text_kz: `— Қажеттіліктерді бағалау: жүктің түрі мен көлемі, жеткізу мерзімдері және маршрут ерекшеліктерін талдау.<br/>— Тасымалдау жоспарын әзірлеу: жол жағдайлары, кеден рәсімдері (халықаралық тасымалдар үшін) және қауіпсіздік талаптарын ескере отырып, оңтайлы маршрут құру.`
+  },
+  {
+    id: 2,
+    title_ru: "Выбор и подготовка вагонов",
+    title_en: "Selection and Preparation of Railcars",
+    title_kz: "Вагондарды таңдау және дайындау",
+    text_ru: `Типы вагонов: <br />— Платформы: Для перевозки контейнеров, крупногабаритных или тяжеловесных грузов.<br />— Крытые вагоны: Для защиты груза от внешних воздействий, таких как дождь или пыль.<br />— Цистерны: Для перевозки жидкостей и химических веществ.<br />— Рефрижераторы: Для транспортировки скоропортящихся товаров и продуктов, требующих определенного температурного режима.<br />— Упаковка и маркировка: Услуги по упаковке и правильной маркировке для обеспечения безопасности и соблюдения требований на протяжении всего пути.`,
+    text_en: `Types of railcars: <br />— Platforms: For transporting containers, oversized, or heavy cargo.<br />— Covered railcars: For protecting cargo from external factors like rain or dust.<br />— Tank cars: For transporting liquids and chemicals.<br />— Refrigerated railcars: For perishable goods requiring specific temperature conditions.<br />— Packaging and labeling: Services for secure and compliant packaging and labeling throughout the journey.`,
+    text_kz: `Вагон түрлері: <br />— Платформалар: Контейнерлерді, ірі габаритті немесе ауыр жүктерді тасымалдау үшін.<br />— Жабық вагондар: Жүктің жаңбыр немесе шаң сияқты сыртқы әсерлерден қорғалуы үшін.<br />— Цистерналар: Сұйықтықтар мен химиялық заттарды тасымалдау үшін.<br />— Рефрижераторлар: Белгілі температуралық режимді қажет ететін тез бұзылатын өнімдерді тасымалдау үшін.<br />— Қаптама және таңбалау: Жүктің қауіпсіздігі мен талаптарға сәйкестігін қамтамасыз ететін қаптама және дұрыс таңбалау қызметтері.`
+  },
+  {
+    id: 3,
+    title_ru: "Транспортировка",
+    title_en: "Transportation",
+    title_kz: "Тасымалдау",
+    text_ru: `Маршруты:<br />— Китай – СНГ: Перевозка через Центральную Азию, используя транзитные маршруты через Казахстан, Узбекистан и другие страны СНГ.<br />— Китай – Европа: Перевозка через Россию и Белоруссию, с возможностью использования коридоров через страны Восточной Европы.<br />— Отслеживание груза: Использование систем мониторинга для контроля за перемещением груза в реальном времени и управления возможными рисками`,
+    text_en: `Routes:<br />— China – CIS: Transport via Central Asia using transit routes through Kazakhstan, Uzbekistan, and other CIS countries.<br />— China – Europe: Transport via Russia and Belarus, with possible corridors through Eastern European countries.<br />— Cargo tracking: Using monitoring systems to track cargo in real time and manage potential risks.`,
+    text_kz: `Маршруттар:<br />— Қытай – ТМД: Қазақстан, Өзбекстан және басқа ТМД елдері арқылы транзиттік маршруттармен Орталық Азия арқылы тасымалдау.<br />— Қытай – Еуропа: Ресей мен Беларусь арқылы, сондай-ақ Шығыс Еуропа елдері арқылы дәліздерді пайдалану мүмкіндігімен тасымалдау.<br />— Жүкті бақылау: Жүктің қозғалысын нақты уақытта бақылауға және ықтимал қауіптерді басқаруға арналған мониторинг жүйелерін пайдалану.`
+  },
+  {
+    id: 4,
+    title_ru: "Таможенное оформление (для международных перевозок)",
+    title_en: "Customs Clearance (for International Shipments)",
+    title_kz: "Кедендік ресімдеу (халықаралық тасымалдар үшін)",
+    text_ru: `— Подготовка документов: Помощь в подготовке и подаче всех необходимых документов для таможенного оформления в странах отправления и назначения.<br />— Взаимодействие с таможенными органами: Решение вопросов, связанных с прохождением таможенных процедур и оформлением грузов.`,
+    text_en: `— Document preparation: Assistance in preparing and submitting all necessary documents for customs clearance in the countries of origin and destination.<br />— Interaction with customs authorities: Handling matters related to customs procedures and cargo clearance.`,
+    text_kz: `— Құжаттарды дайындау: Жөнелту және қабылдау елдерінде кедендік ресімдеу үшін қажетті барлық құжаттарды дайындау және тапсыруға көмек көрсету.<br />— Кеден оргаларымен өзара әрекеттесу: Кедендік рәсімдерден өту және жүктің ресімделуіне байланысты мәселелерді шешу.`
+  },
+  {
+    id: 5,
+    title_ru: "Доставка и распределение",
+    title_en: "Delivery and Distribution",
+    title_kz: "Жеткізу және тарату",
+    text_ru: `— Перегрузка на других видах транспорта: Организация перевозки груза с железнодорожного транспорта на автомобильный или морской для последней мили до конечного пункта.<br />— Разгрузка и распределение: Услуги по разгрузке и распределению на складах и в распределительных центрах.`,
+    text_en: `— Transshipment to other modes of transport: Organizing cargo transfer from rail to road or sea for last-mile delivery.<br />— Unloading and distribution: Services for unloading and distributing cargo at warehouses and distribution centers.`,
+    text_kz: `— Басқа көлік түрлеріне ауыстыру: Жүкті теміржолдан автомобиль немесе теңіз көлігіне ауыстырып, соңғы жеткізу нүктесіне тасымалдауды ұйымдастыру.<br />— Түсіру және тарату: Қоймалар мен тарату орталықтарында жүкті түсіру және тарату қызметтері.`
+  },
+  {
+    id: 6,
+    title_ru: "Обратная связь и поддержка",
+    title_en: "Feedback and Support",
+    title_kz: "Кері байланыс және қолдау",
+    text_ru: `— Клиентская поддержка: Оперативное реагирование на запросы и проблемы, связанные с перевозкой.<br />— Контроль за качеством: Обеспечение высокого уровня обслуживания и оперативное решение возникающих вопросов.`,
+    text_en: `— Customer support: Prompt response to transportation-related inquiries and issues.<br />— Quality control: Ensuring high service standards and timely resolution of issues.`,
+    text_kz: `— Тұтынушыларды қолдау: Тасымалдауға қатысты сұраныстар мен мәселелерге жедел әрекет ету.<br />— Сапаны бақылау: Қызмет көрсету сапасының жоғары деңгейін қамтамасыз ету және туындайтын мәселелерді уақтылы шешу.`
+  },
+  {
+    id: 7,
+    title_ru: "Дополнительные услуги",
+    title_en: "Additional Services",
+    title_kz: "Қосымша қызметтер",
+    text_ru: `— Страхование груза: Предоставление опций по страхованию для защиты от убытков или повреждений.<br />— Складские услуги: Временное хранение грузов на складах компании или партнеров.`,
+    text_en: `— Cargo insurance: Offering insurance options to protect against loss or damage.<br />— Warehousing services: Temporary storage of goods at company or partner warehouses.`,
+    text_kz: `— Жүкті сақтандыру: Зиян немесе жоғалту жағдайларынан қорғау үшін сақтандыру опцияларын ұсыну.<br />— Қойма қызметтері: Компания немесе серіктестердің қоймаларында жүктерді уақытша сақтау.`
+  }
 ];

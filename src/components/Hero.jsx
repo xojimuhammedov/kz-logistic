@@ -21,7 +21,7 @@ const Hero = ({ data }) => {
     return (
         <>
             <Box
-             mt={'180px'}
+                mt={'180px'}
                 w="100%"
                 position="relative"
                 // overflow="hidden"
@@ -94,13 +94,13 @@ const Hero = ({ data }) => {
                                 borderRadius="md"
                                 overflow="hidden"
                                 position="relative"
-                                left={'13%'}
+                                left={{ base: "0", lg: '13%' }}
                                 zIndex="9999999"
                             >
                                 <Image
                                     src={data?.image}
                                     alt="Orange AXT Trucks"
-                                    w="570px"
+                                    w={{ base: "100%", lg: "570px" }}
                                     h="350px"
                                     objectFit={'contain'}
                                 />

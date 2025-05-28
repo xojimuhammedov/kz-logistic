@@ -35,7 +35,10 @@ function NavbarMenu() {
                             <Alink onClick={onClose} to={"/"}>
                                 <Text {...css.link}>{t("Home")}</Text>
                             </Alink>
-                            <Menu isLazy>
+                            <Alink onClick={onClose} to={"/"}>
+                                <Text {...css.link}>{t("About")}</Text>
+                            </Alink>
+                            {/* <Menu isLazy>
                                 <MenuButtonTwo {...css.link}>{t("About")}</MenuButtonTwo>
                                 <MenuList>
                                     <MenuItem onClick={() => {
@@ -47,7 +50,7 @@ function NavbarMenu() {
                                         onClose
                                     }} fontSize={'14px'} color={'rgba(0, 0, 0, 1)'} fontWeight={'600'}>{t("Автопарк")}</MenuItem>
                                 </MenuList>
-                            </Menu>
+                            </Menu> */}
                             <Menu isLazy>
                                 <MenuButtonTwo {...css.link}>{t("Services")}</MenuButtonTwo>
                                 <MenuList>

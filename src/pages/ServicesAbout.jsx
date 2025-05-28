@@ -6,6 +6,8 @@ import { servicesData } from '../data';
 import { useTranslation } from 'react-i18next';
 import AirCargo from '../components/AirCargo';
 import Form from './Form';
+import Geography from '../components/Geography';
+import Stage from '../components/Stage';
 
 const ServicesAbout = () => {
     const { id } = useParams()
@@ -24,6 +26,8 @@ const ServicesAbout = () => {
                     />
                 </Box>
             </Box>
+            <Stage />
+            <Geography />
             <AirCargo />
             <Form />
         </>
@@ -37,6 +41,9 @@ const css = {
     text: {
         fontSize: "14px",
         lineHeight: "28px",
-        width: "600px"
+        width: {
+            base: "100%",
+            lg: "600px"
+        }
     }
 }

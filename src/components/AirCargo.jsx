@@ -53,12 +53,12 @@ const AirCargo = () => {
         <Box p={'36px 0'}>
             <Box className='container'>
                 <Heading as="h1"
-                    fontSize={{ base: "4xl" }}
+                    fontSize={{ base: "2xl", lg:"4xl" }}
                     textAlign={'center'}
                     fontWeight="bold"
                     lineHeight="1.2"
                     color="#2F2F2F">{t("Быстро доставим груз и оформим все документы за вас")}</Heading>
-                <SimpleGrid mt={'36px'} alignItems={'center'} columns={5}>
+                <SimpleGrid mt={'36px'} gap={{ base: "12px", lg: "24px" }} alignItems={'center'} columns={{ base: 2, xl: 5 }}>
                     {
                         data.map((item) => (
                             <Flex flexDirection={'column'} align={'center'}>

@@ -12,10 +12,7 @@ function Navbar() {
     return (
         <Box>
             <Box pb={'12px'} borderBottom={'1px solid rgba(51, 51, 51, 0.20)'} className="container">
-                <Flex justifyContent={"space-between"} align={"center"}>
-                    <Alink to={"/"}>
-                        <Image {...css.image} src={LogoIcon} />
-                    </Alink>
+                <Flex justifyContent={"flex-end"} align={"center"}>
                     <Flex align={"center"} gap={{ base: "16px", lg: "32px" }}>
                         <Alink to={"/"}>
                             <Text {...css.link}>{t("Home")}</Text>

@@ -45,13 +45,13 @@ const ContactInfo = () => {
                         />
                         <Link
                             fontSize="md"
-                            href='tel:+77710540606'
+                            href='tel:+87710540606'
                             target='_blank'
                             color="#F70"
                             fontWeight="medium"
                             _hover={{ textDecoration: 'underline', cursor: 'pointer' }}
                         >
-                            +7 771 054 06 06
+                            +8 771 054 06 06
                         </Link>
                     </HStack>
                 </VStack>

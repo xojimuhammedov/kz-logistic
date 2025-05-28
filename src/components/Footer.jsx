@@ -45,7 +45,7 @@ function Footer() {
                     <Flex flexDirection={"column"}>
                         <Heading {...css.title}>{t("SERVICES")}</Heading>
                         {
-                            servicesData?.slice(0, 4)?.map((item) => (
+                            servicesData?.map((item) => (
                                 <Alink
                                     onClick={() => window.scrollTo({ top: 0 })}
                                     key={item?.id} to={`/service/${item?.id}`}>
@@ -57,12 +57,12 @@ function Footer() {
                     </Flex>
                     <Flex flexDirection={"column"}>
                         <Heading {...css.title}>{t("Contact")}</Heading>
-                        <Link {...css.link} target="_blank" href={"tel:+77710540606"}>
-                            +7 771 054 06 06
+                        <Link {...css.link} target="_blank" href={"tel:+87710540606"}>
+                            +8 771 054 06 06
                         </Link>
-                        <Link {...css.link} target="_blank" href={"tel:+77710540606"}>
+                        {/* <Link {...css.link} target="_blank" href={"tel:+77710540606"}>
                             +7 771 054 06 06
-                        </Link>
+                        </Link> */}
 
                         <Link
                             {...css.link}
@@ -95,7 +95,7 @@ function Footer() {
                             <Link target="_blank" href="https://t.me/+77014343431">
                                 <Image {...css.icon} src={Telegram} alt="Telegram" />
                             </Link>
-                            <Link target="_blank" href="https://wa.me/+77710140505">
+                            <Link target="_blank" href="https://wa.me/+87710540606">
                                 <Image {...css.icon} src={WhatsappIcon} alt="WhatsappIcon" />
                             </Link>
                         </Flex>
