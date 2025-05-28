@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, Input, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Input, Link, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { toast } from "react-toastify";
@@ -82,13 +82,12 @@ function Form() {
         );
     }
     return (
-        <Box  mt={'180px'} p={{ base: "36px 0" }}>
+        <Box mt={'180px'} p={{ base: "36px 0" }}>
             <Box {...css.form} className="container">
                 <Flex
                     flexDirection={{ base: "column", md: "row" }}
                     gap={{
-                        base: "36px",
-                        lg: "84px",
+                        base: "18px",
                     }}>
                     <Box>
                         <Heading {...css.title}>{t("Get in touch")}</Heading>
@@ -143,12 +142,9 @@ function Form() {
                             <Placemark geometry={[47.112570, 51.903453]} />
                         </Map>
                     </YMaps>
-                    {/* <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2715.3103515694324!2d51.89098498774162!3d47.11258899675808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41a3e9904dcef067%3A0x4f5e9ce1ca3f296c!2sGagarin%20St%2065%2C%20Atyrau%2C%20Kazakhstan!5e0!3m2!1sen!2s!4v1745735616688!5m2!1sen!2s" className="form-map"
-                        style={{ border: "0" }}
-                        allowFullScreen=""
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"></iframe> */}
+                    <Box>
+                        <Link target="_blank" {...css.item} download href="/public/rekvizit.pdf">{t("Скачать реквизиты")}</Link>
+                    </Box>
                 </Flex>
             </Box>
         </Box>
@@ -163,7 +159,7 @@ const css = {
         borderRadius: "10px",
         padding: {
             base: "10px",
-            lg: "40px",
+            lg: "20px",
         },
     },
     button: {
@@ -198,4 +194,17 @@ const css = {
         fontWeight: "400",
         letterSpacing: "0.14px",
     },
+    item: {
+        justifyContent: "center",
+        display: "flex",
+        alignItems: "center",
+        backgroundColor: "#f70",
+        fontSize: "15px",
+        lineHeight: "1.3",
+        fontWeight: "500",
+        color: "#fff",
+        width: "180px",
+        height: "45px",
+        borderRadius: "6px"
+    }
 };

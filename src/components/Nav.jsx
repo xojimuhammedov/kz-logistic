@@ -19,7 +19,7 @@ const Nav = () => {
                     <Alink to={"/"}>
                         <Image {...css.image} src={LogoIcon} />
                     </Alink>
-                    <Flex align={'center'} gap={'18px'} justify={'flex-end'}>
+                    <Flex align={'center'} gap={{ base: "12px", lg: '18px' }} justify={'flex-end'}>
                         <CalculatorModal />
                         <ContactInfo />
                         <Link target='_blank' href='tel:+87710540606' {...css.phone}>
@@ -83,8 +83,11 @@ const css = {
         background: "#F70",
         border: "1px solid #F70",
     },
-      image: {
-        height:"90px",
-        objectFit:"contain"
+    image: {
+        height: {
+            base: "70px",
+            lg: "90px"
+        },
+        objectFit: "contain"
     }
 }
