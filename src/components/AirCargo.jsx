@@ -50,7 +50,7 @@ const data = [
 const AirCargo = () => {
     const { t, i18n } = useTranslation()
     return (
-        <Box p={'36px 0'}>
+        <Box p={'36px 0'} pb={'0'}>
             <Box className='container'>
                 <Heading as="h1"
                     fontSize={{ base: "2xl", lg:"4xl" }}

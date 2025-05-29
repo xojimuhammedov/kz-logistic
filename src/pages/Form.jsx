@@ -1,8 +1,10 @@
-import { Box, Button, Flex, Heading, Input, Link, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, HStack, Icon, Input, Link, Text, VStack } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { toast } from "react-toastify";
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
+import { EmailIcon, PhoneIcon } from "@chakra-ui/icons";
+import PDFDownloadButton from "./PdfDownload";
 
 function Form() {
     const { t } = useTranslation();
@@ -82,14 +84,64 @@ function Form() {
         );
     }
     return (
-        <Box mt={'180px'} p={{ base: "36px 0" }}>
+        <Box mt={'140px'} p={{ base: "36px 0" }}>
             <Box {...css.form} className="container">
+                <Heading fontSize={'3xl'} mb={'24px'}>{t("Contact")}</Heading>
                 <Flex
                     flexDirection={{ base: "column", md: "row" }}
                     gap={{
-                        base: "18px",
+                        base: "24px",
                     }}>
-                    <Box>
+                    <HStack gap={'24px'} flexDirection={'column'} align="stretch">
+                        {/* Email Section */}
+                        <VStack align="flex-start">
+                            <Text fontSize="16px" fontWeight="bold" color="gray.700">
+                                {t("E-mail")}:
+                            </Text>
+                            <HStack spacing={2} align="center">
+                                <Icon
+                                    as={EmailIcon}
+                                    color="#F70"
+                                    boxSize={5}
+                                />
+                                <Link
+                                    fontSize="md"
+                                    color="#F70"
+                                    fontWeight="medium"
+                                    href='mailto:nomexlogistics.kz@gmail.com'
+                                    target='_blank'
+                                    _hover={{ textDecoration: 'underline', cursor: 'pointer' }}
+                                >
+                                    nomexlogistics.kz@gmail.com
+                                </Link>
+                            </HStack>
+                        </VStack>
+
+                        {/* Phone Section */}
+                        <VStack align="flex-start">
+                            <Text fontSize="16px" fontWeight="bold" color="gray.700">
+                                {t("Контактный номер")}:
+                            </Text>
+                            <HStack spacing={2} align="center">
+                                <Icon
+                                    as={PhoneIcon}
+                                    color="#F70"
+                                    boxSize={4}
+                                />
+                                <Link
+                                    fontSize="md"
+                                    href='tel:+87710540606'
+                                    target='_blank'
+                                    color="#F70"
+                                    fontWeight="medium"
+                                    _hover={{ textDecoration: 'underline', cursor: 'pointer' }}
+                                >
+                                    +8 771 054 06 06
+                                </Link>
+                            </HStack>
+                        </VStack>
+                    </HStack>
+                    {/* <Box>
                         <Heading {...css.title}>{t("Get in touch")}</Heading>
                         <input
                             className="form-input"
@@ -136,15 +188,16 @@ function Form() {
                         <Button type="submit" onClick={sendMessage} {...css.button}>
                             {t("Рассчитать")}
                         </Button>
-                    </Box>
+                    </Box> */}
                     <YMaps>
-                        <Map defaultState={{ center: [47.112570, 51.903453], zoom: 9 }} width="100%" height="auto">
+                        <Map defaultState={{ center: [47.112570, 51.903453], zoom: 18 }} width="100%" height="300px">
                             <Placemark geometry={[47.112570, 51.903453]} />
                         </Map>
                     </YMaps>
-                    <Box>
-                        <Link target="_blank" {...css.item} download href="/public/rekvizit.pdf">{t("Скачать реквизиты")}</Link>
-                    </Box>
+                    <PDFDownloadButton />
+                    {/* <Box>
+                        <Link target="_blank" {...css.item} download href="/rekvizit.pdf">{t("Скачать реквизиты")}</Link>
+                    </Box> */}
                 </Flex>
             </Box>
         </Box>
