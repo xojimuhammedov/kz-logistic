@@ -8,7 +8,7 @@ import {
     ModalCloseButton,
 } from "@chakra-ui/react";
 
-import { Link as Alink } from "react-router-dom";
+import { Link as Alink, useNavigate } from "react-router-dom";
 import MenuButton from "../assets/MenuButton";
 import { useTranslation } from "react-i18next";
 import { servicesData } from "../data";
@@ -16,6 +16,7 @@ import { servicesData } from "../data";
 function NavbarMenu() {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const { t, i18n } = useTranslation();
+     const navigate = useNavigate()
     return (
         <>
             <Button {...css.button} onClick={onOpen}>
@@ -56,7 +57,7 @@ function NavbarMenu() {
                                 <MenuList>
                                     {
                                         servicesData?.map((item) => (
-                                            <MenuItem onClick={() => { navigate(`/service/${item?.id}`); onClose }} fontSize={'14px'} color={'rgba(0, 0, 0, 1)'} fontWeight={'600'}>{item[`title_${i18n?.language}`]}</MenuItem>
+                                            <MenuItem onClick={() => { navigate(`/service/${item?.id}`); onClose() }} fontSize={'14px'} color={'rgba(0, 0, 0, 1)'} fontWeight={'600'}>{item[`title_${i18n?.language}`]}</MenuItem>
                                         ))
                                     }
                                 </MenuList>
