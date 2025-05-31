@@ -22,11 +22,11 @@ const Nav = () => {
                     <Flex align={'center'} gap={{ base: "12px", lg: '18px' }} justify={'flex-end'}>
                         <CalculatorModal />
                         <ContactInfo />
-                        <Link target='_blank' href='tel:+87710540606' {...css.phone}>
+                        <Link target='_blank' href='tel:+77710540606' {...css.phone}>
                             <Phone width='18px' />
                             {t("Позвонить")}
                         </Link>
-                        <Link target="_blank" href="https://wa.me/+87710540606" {...css.whatsapp}>
+                        <Link target="_blank" href="https://wa.me/+77710540606" {...css.whatsapp}>
                             <Image w={'20px'} src={WhatsappIcon} />
                             WhatsApp
                         </Link>
